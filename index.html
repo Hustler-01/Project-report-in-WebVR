@@ -25,3 +25,244 @@
         <button class="splash__button">Enter</button>
       </div>
     </div>
+<!-- Load Assets -->
+    <a-assets>
+      <!-- global -->
+      <img id="floor" src="img/other/floor.jpg">
+      <img id="wall" src="img/other/wall-concrete.jpg">
+      <img id="wall-secret" src="img/other/wall-concrete-secret.jpg">
+      <img id="wall-brick" src="img/other/brick.jpg">
+      <img id="room-sign-1" src="img/room-sign-1.png">
+      <img id="room-sign-2" src="img/room-sign-2.png">
+      
+      <!-- team -->
+      <img id="team poster" src="img/team poster.jpg">
+      <img id="project poster" src="img/project poster.jpg">
+      <img id="team members" src="img/team members.jpg">
+
+      <!-- Example Room 1-->
+      <img id="obj 1" src="img/obj 1.jpg">
+      <img id="obj 2" src="img/obj 2.jpg">
+      <img id="intro 1" src="img/intro 1.jpg">
+      <img id="intro 2" src="img/intro 2.jpg">
+      <!-- Example Room 2-->
+      <img id="scene desc" src="img/scene desc.jpg">
+      <img id="modern 0" src="img/modern 0.jpg">
+      <img id="modern 1" src="img/modern 1.jpg">
+      <img id="modern 2" src="img/modern 2.jpg">
+      <img id="stone 0" src="img/stone 0.jpg">
+      <img id="stone 1" src="img/stone 1.jpg">
+      <img id="stone 2" src="img/stone 2.jpg">
+
+      <!-- Example Room 3 -->
+      <img id="key 0" src="img/key 0.jpg">
+      <img id="key 11" src="img/key 11.jpg">
+      <img id="key 12" src="img/key 12.jpg">
+      <img id="key 21" src="img/key 21.jpg">
+      <img id="key 22" src="img/key 22.jpg">
+      <img id="key 3" src="img/key 3.jpg">
+      <img id="key 4" src="img/key 4.jpg">
+      <!-- Example Room 4-->
+      <img id="method 0" src="img/method 0.jpg" />
+      <img id="method 1" src="img/method 1.jpg">
+      <img id="method 2" src="img/method 2.jpg">
+      <img id="method 3" src="img/method 3.jpg">
+      <img id="implement 0" src="img/implement 0.jpg">
+      <img id="implement 1" src="img/implement 1.jpg">
+      <img id="implement 2" src="img/implement 2.jpg">
+      <img id="implement 3" src="img/implement 3.jpg">
+
+      <!-- Example Room 5 -->
+      <img id="limits" src="img/limits.jpg">
+      <img id="acknowledge" src="img/acknowledge.jpg">
+      <img id="inference" src="img/inference.jpg">
+      <img id="refer" src="img/refer.jpg">
+      <img id="conclusion" src="img/conclusion.jpg">
+      <img id="thanks" src="img/thanks.jpg">
+
+      <!-- Example Theater 6-->
+      <video id="theaterVideo" autoplay loop="true" webkit-playsinline playsinline src="img/theater/movie.mp4"></video>
+      <img id="theater-curtains" src="img/theater/curtains.png">
+      <a-asset-item id="couch-obj" src="img/theater/couch model.obj"></a-asset-item>
+      <a-asset-item id="couch-mtl" src="img/theater/couch materials.mtl"></a-asset-item>
+
+      <!-- Secret Room -->
+      <a-asset-item id="fox-obj" src="img/model.obj"></a-asset-item>
+      <a-asset-item id="fox-mtl" src="img/materials.mtl"></a-asset-item>
+
+    </a-assets>
+
+    <!-- User / Camera -->
+    <a-entity
+      id="player"
+      camera="user-height: 1.6"
+      universal-controls
+      kinematic-body
+      listener
+      position: "0 9 0"
+    ></a-entity>
+
+
+    <!-- Start Room  (spawn) -->
+    <a-entity position="-1.5 1.5 19.5" rotation="0 0 0">
+      <!--left wall -->
+      <a-entity rotation= "0 90 0">
+        <a-image position="1 1.5 -4.4" src="#team poster" height="5" width="5"></a-image>
+      </a-entity>
+    </a-entity>
+
+    <!-- hallway -->
+    <!-- right wall -->
+    <a-image position="-.1 3 3" rotation="0 -90 0" src="#project poster" height="3" width="3"></a-image>
+    <a-image position="-.1 3 12" rotation="0 -90 0" src="#intro" height="3" width="3"></a-image>
+    
+    <!-- left wall -->
+    <a-image position="-2.9 3 12" rotation="0 90 0" src="#project poster" height="3" width="3"></a-image>
+    <a-image position="-2.9 3 -9" rotation="0 90 0" src="#team members" height="3" width="3"></a-image>
+    
+    <!-- Room 1 (Immediate right) -->
+    <a-entity position="10.5 1.5 19.5" rotation="0 -90 0">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
+      <!-- Back wall -->
+      <a-image position="-2 1.5 -4.4" src="#intro 1" height="5" width="4"></a-image>
+      <a-image position="2 1.5 -4.4" src="#intro 2" height="5" width="4"></a-image>
+      <!--right wall -->
+      <a-entity rotation= "0 -90 0">
+        <a-image position="-2 0 -4.4" src="#team members" height="7" width="7"></a-image>
+      </a-entity>
+      <!--left wall -->
+      <a-entity rotation= "0 90 0">
+        <a-image position="-2 1.5 -4.4" src="#obj 1" height="5" width="4"></a-image>
+        <a-image position="2 1.5 -4.4" src="#obj 2" height="5" width="4"></a-image>
+      </a-entity>
+    </a-entity>
+
+    <!-- Example Room 2 (First Left) -->
+    <a-entity position="-10.5 1.5 7.5" rotation="0 90 0">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
+      <!-- Back wall -->
+      <a-image position="-2 0 -4.4" src="#scene desc" height="5" width="5"></a-image>
+      <!--right wall -->
+      <a-entity rotation= "0 -90 0">
+        <a-image position="-2 0 -4.4" src="#modern 1" height="2" width="2.5"></a-image>
+        <a-image position="-2 2.4 -4.4" src="#modern 0" height="2" width="2.5"></a-image>
+        <a-image position="2 0 -4.4" src="#modern 2" height="2.5" width="2.5"></a-image>
+      </a-entity>
+      <!--left wall -->
+      <a-entity rotation= "0 90 0">
+        <a-image position="-2 0 -4.4" src="#stone 1" height="2" width="2.5"></a-image>
+        <a-image position="-2 2.4 -4.4" src="#stone 0" height="2" width="2.5"></a-image>
+        <a-image position="2 0 -4.4" src="#stone 2" height="2.5" width="2.5"></a-image>
+      </a-entity>
+    </a-entity>
+
+    <!-- Room 3 (First Right) -->
+    <a-entity position="7.5 1.5 7.5" rotation="0 -90 0">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
+      <!-- Back wall -->
+      <a-image position="-2.2 1.3 -4.4" src="#key 21" height="4" width="4"></a-image>
+      <a-image position="2.2 1.3 -4.4" src="#key 22" height="4" width="4"></a-image>
+      
+       <!--right wall -->
+       <a-entity rotation= "0 -90 0">
+        <a-box position="2.5 0 -3.6" color="#fb8e92" depth="1" height="3.02" width="1"></a-box>
+        <a-box position="1 -.7 -3.6" color="#b0b4e5" depth="1" height="1.53" width="1"></a-box>
+        <a-image position="1 -.5 -3.05" src="#key 3" height="1" width="1"></a-image>
+        <a-image position="2.5 -.5 -3.05" src="#key 4" height="1" width="1"></a-image>
+      </a-entity>
+      <!--left wall -->
+      <a-entity rotation= "0 90 0">
+        <a-image position="1.5 1.3 -4.4" src="#key 0" height="5" width="2.5"></a-image>
+        <a-box position="-3 -.3 -3.6" color="#b0b4e5" depth="1" height="2.27" width="1"></a-box>
+        <a-box position="-2 .85 -3.6" color="#000" depth="1" height=".23" width="1"></a-box>
+        <a-image position="-3 -.3 -3.05" src="#key 11" height="1" width="1"></a-image>
+        <a-image position="-2 .85 -3.05" src="#key 12" height="1" width="1"></a-image>
+    </a-entity>
+
+    <!-- Example Room 4 (Second Left) -->
+    <a-entity position="-10.5 1.5 -4.5" rotation="0 90 0">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
+      <!-- Back wall -->
+      <a-image position="0 1.5 -4.4" src="#method 3" height="4" width="4"></a-image>
+      <a-image position="0 5.1 -4.2" rotation="15 0 0" src="#implement 3" height="4" width="4"></a-image>
+      <!--right wall -->
+      <a-entity rotation= "0 -90 0">
+        <a-image position="-2 0 -4.4" src="#method 0" height="4" width="4"></a-image>
+        <a-image position="0 2.4 -4.4" src="#method 1" height="2.5" width="4"></a-image>
+        <a-image position="2 0 -4.4" src="#method 2" height="4" width="4"></a-image>
+      </a-entity>
+      <!--left wall -->
+      <a-entity rotation= "0 90 0">
+        <a-image position="-2 0 -4.4" src="#implement 0" height="4" width="4"></a-image>
+        <a-image position="0 2.4 -4.4" src="#implement 1" height="2.5" width="4"></a-image>
+        <a-image position="2 0 -4.4" src="#implement 2" height="4" width="4"></a-image>
+      </a-entity>
+    </a-entity>
+
+    <!-- Example Room 5 (Second Right) -->
+    <a-entity position="7.5 1.5 -4.5" rotation="0 -90 0">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
+      <!-- Back wall -->
+      <a-image position="0 1.3 -4.4" src="#inference" height="5" width="5"></a-image>
+      <!--right wall -->
+      <a-entity rotation= "0 -90 0">
+        <a-image position="-2 1.3 -4.4" src="#limits" height="5" width="4"></a-image>
+        <a-image position="2 1.3 -4.4" src="#conclusion" height="4" width="4"></a-image>
+      </a-entity>
+      <!--left wall -->
+      <a-entity rotation= "0 90 0">
+        <a-image position="-2 1.3 -4.4" src="#acknowledge" height="4" width="3.5"></a-image>
+        <a-image position="2 1.3 -4.4" src="#refer" height="4" width="3.5"></a-image>
+        <a-image position="0 5.1 -4.2" rotation="15 0 0" src="#thanks" height="2.5" width="5"></a-image>
+      </a-entity>
+    </a-entity>
+
+
+    <!-- Example Room 6 (far back room ) -->
+    <a-entity position="-1.5 1.5 -22.5">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#github" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
+      <!-- Back wall -->
+      <a-video src="#theaterVideo" width="7" height="5.25" position="0 1.4 -4.4"></a-video>
+      <a-image position="0 0 -4.4" src="#theater-curtains" height="12" width="9"></a-image>
+      <!-- objects -->
+      <a-entity obj-model="obj: #couch-obj; mtl: #couch-mtl" position ="0 -1 1" rotation="0 0 0" scale="2 2 2"></a-entity>
+      <!-- ceiling -->
+      <a-plane position="0 6 0" rotation="90 0 0" height="9" width="9" color="black"></a-plane>
+    </a-entity>
+
+    <!-- Secret Room (Second Right) -->
+    <a-entity position="-22.5 1.5 19.5" rotation="0 0 0">
+      <a-entity obj-model="obj: #fox-obj; mtl: #fox-mtl" rotation="0 -110 0"></a-entity>
+    </a-entity>
+
+
+
+    <!-- Ground -->
+    <a-grid id="ground" static-body material="src: #floor; repeat: 15 15" rotation="0 -90 0"></a-grid>
+
+    <!-- Walls (used by map.js -->)
+    <a-entity id="walls"></a-entity>
+
+
+    <!-- Sky -->
+    <a-sky id="sky" color="#0000ff"></a-sky>
+
+  </a-scene>
+
+  <script src="js/map.js"></script>
+  <script src="js/video.js"></script>
+
+</body>
+</html>
