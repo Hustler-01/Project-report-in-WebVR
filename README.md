@@ -9,30 +9,8 @@ Shiwangi
 Shakshi
 Diksha
 
-
-TABLE OF CONTENTS
-
-
-OBJECTIVE       									3
-INTRODUCTION									3
-SCENE DESCRIPTION								4
-KEY FEATURES                                                                                                               5
-METHODOLOGY						        		             6
-IMPLEMENTATION									7
-CONCLUSION                                                                                                                  9
-INFERENCES									            10
-LIMITATIONS AND FUTURE INCORPORATIONS					11
-REFERENCES										12
-TEAM DETAILS									12
-	
-
-
-
-
-
-
-
 OBJECTIVE
+
 The primary objective of "TimeWarp VR: A Journey Across Eras" is to create an innovative and immersive virtual reality project that offers users a captivating journey through time. By seamlessly transporting users between two meticulously designed rooms representing the modern era and the Stone Age, the project aims to provide an interactive and educational experience. Through this time-traveling adventure, users will gain a deeper understanding of the technological advancements, cultural practices, and challenges faced by societies in each era. The project seeks to foster a sense of appreciation for human achievements over millennia and inspire curiosity about the evolution of civilization. By incorporating interactive elements, informative panels, and dynamic gameplay, "TimeWarp VR" aims to engage users in exploring history, drawing connections between the past and present, and ultimately, instilling a profound sense of wonder and insight into the human journey through time.
 INTRODUCTION
 TimeWarp VR: A Journey Across Eras" is a groundbreaking and immersive virtual reality project that offers users an unparalleled opportunity to traverse through the annals of human history. Developed on the A-Frame platform, this innovative VR experience beckons participants to embark on a captivating and enlightening adventure through time. By seamlessly transporting users between two meticulously crafted rooms, each representing a distinct era, the project aims to provide an interactive and educational journey that fosters a deeper appreciation for the achievements of humanity over millennia. 
